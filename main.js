@@ -125,26 +125,25 @@ display(listado_productos, "list_productos");
 let listaCarro = [];
 // Traer carrito de localStorage
 function loadCart() {
-  localStorage.getItem("total", totalCarrito);
-  carroStorage = JSON.parse(localStorage.getItem("carrito"));
-  totalCarrito = 0;
-  for (let i = 0; i < carroStorage.length; i++) {
-    listaCarro.push(
-      new Producto(
-        carroStorage[i].img,
-        carroStorage[i].id,
-        carroStorage[i].nombre,
-        carroStorage[i].precio,
-        carroStorage[i].cantidad
-      )
-    );
+  if (localStorage.getItem("carrito") != null) {
+    localStorage.getItem("total", totalCarrito);
+    carroStorage = JSON.parse(localStorage.getItem("carrito"));
+    totalCarrito = 0;
+    for (let i = 0; i < carroStorage.length; i++) {
+      listaCarro.push(
+        new Producto(
+          carroStorage[i].img,
+          carroStorage[i].id,
+          carroStorage[i].nombre,
+          carroStorage[i].precio,
+          carroStorage[i].cantidad
+        )
+      );
+    }
   }
-}
-if (localStorage.getItem("carrito") != null) {
-  loadCart();
   tablaCarrito(listaCarro, "carrito");
-  let botones_quitar = document.querySelectorAll(".btn_quitar");
 }
+loadCart();
 
 // Guardar el carrito a localStorage
 function saveCart() {
@@ -234,7 +233,7 @@ function tablaCarrito(array, id, callback = undefined) {
       });
     });
   } else {
-    table.innerHTML = "No hay nada todavía. ¿Qué esperas?";
+    table.innerHTML = "<td>No hay nada todavía. ¿Qué esperas?</td>";
   }
   saveCart();
   callback;
