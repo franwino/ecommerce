@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="912.031" height="664.256" viewBox="0 0 912.031 664.256">
+  <g id="MarcaAguaCatHat" transform="translate(14.733)">
+    <g id="MarcaAguaCatHat-2" data-name="MarcaAguaCatHat" transform="matrix(0.966, 0.259, -0.259, 0.966, 64.633, -131.128)">
+      <path id="MarcaAguaHat" d="M98.735,536.824h3.251l-2.763-10.313,14.384,6.329,653.675-9.654,17.463,2.58,117.037-15.389,2.9,10.837S893.05,537.4,859.113,562.463c-12.36,13.475-52.332,15.922-71.1.175-7.828-26.227-2.187-35.8-6.221-73.339-1.183-11.006.512-37.045-2.063-55.113-9.5-59.843-12.382-107.294-62.122-158.969C634.985,189.379,481.077,213.9,481.077,213.9s-166.87,7.153-233.293,98.1,2.929,201.5-34.515,240.57-26.438,25.959-59.047,28.889-54.656-41.542-54.656-41.542" transform="translate(-12.466 -9.921)" fill="none" stroke="rgba(242,183,5,0.24)" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"/>
+      <path id="OrejaDer" d="M175.417,251.876S255.5,44.881,207.992,7.472,0,85.281,0,85.281" transform="translate(647.987 115.804) rotate(8)" fill="none" stroke="rgba(242,183,5,0.24)" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="20"/>
+      <path id="OrejaIzq" d="M193.565,0s81.574,191.42,33.182,226.014S0,138.376,0,138.376" transform="translate(383.949 342.559) rotate(172)" fill="none" stroke="rgba(242,183,5,0.24)" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="20"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>| Cat Hats |</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Peta&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Nav Bar -->
+      <nav class="fadeInDown">
+        <div class="cathat_image">
+          <img src="img/logo_a.png" alt="Logo CatHat" />
+        </div>
+        <div class="nav_options">
+          <ul>
+            <li><a class="link_compra">Check-out</a></li>
+            <li><a href="#catalogo">Catálogo</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Bienvenida -->
+    <section class="main_section">
+      <h1 class="fadeIn">
+        Dale a tu felino el mejor accesorio. <br />
+        ¡Comprale un buen sombrero!
+      </h1>
+      <!-- <a href="catalogo.html" class="main_button fadeInUp">¿Qué me estás diciendo?</a> -->
+    </section>
+
+    <!-- Catálogo de productos -->
+    <h2 class="h_catalogo" id="catalogo">Nuestros productos</h2>
+    <section>
+      <div class="flex_right">
+        <select id="ordenarpor">
+          <option value="">Ordenar por:</option>
+          <option value="pr.asc">Menor precio</option>
+          <option value="pr.dsc">Mayor precio</option>
+          <option value="nom.asc">Nombre A-Z</option>
+          <option value="nom.dsc">Nombre Z-A</option>
+        </select>
+      </div>
+      <ul class="catalogo" id="list_productos"></ul>
+    </section>
+
+    <section class="compras" id="compras">
+      <h3>Carrito de Compras</h3>
+
+      <table class="tabla_carrito">
+        <tbody id="carrito"></tbody>
+      </table>
+      <div class="buttons">
+        <button class="btn_vaciar" id="vaciar">VACIAR CARRITO</button>
+        <button class="btn_comprar link_compra" id="comprar">
+          CONTINUAR A PAGO
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bottom">
+      <h3>=^.^=</h3>
+
+      <p>COPYRIGHT FELINOS FELICES -- @2020</p>
+    </footer>
+
+    <!-- Script -->
+    <script src="main.js"></script>
+  </body>
+</html>

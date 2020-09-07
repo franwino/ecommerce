@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>| Cat Hats - Check-out |</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Peta&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <!-- Nav Bar -->
+      <nav class="fadeInDown">
+        <div class="cathat_image">
+          <img src="img/logo_a.png" alt="Logo CatHat" />
+        </div>
+        <div class="nav_options">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <!-- <li><a href="#catalogo">Catálogo</a></li> -->
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Formulario de pago -->
+    <div class="form_container first">
+      <form action="#" method="POST">
+        <h3>El total de su compra es: $<span id="total"></span></h3>
+        <p></p>
+        <h3>Ahora completa tus datos para terminar el pago:</h3>
+        <label for="name">Nombre:</label>
+        <input
+          type="text"
+          class="user-data"
+          placeholder="Maria"
+          name="Nombre"
+        />
+        <label for="apellido">Apellido:</label>
+        <input
+          type="text"
+          class="user-data"
+          placeholder="Perez"
+          name="Apellido"
+        />
+        <label for="dni">Documento:</label>
+        <input type="dni" class="user-data" placeholder="33000111" name="DNI" />
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          class="user-data"
+          placeholder="mariaperez@mail.com"
+          name="Email"
+        />
+        <label for="phone">Teléfono:</label>
+        <input
+          type="tel"
+          class="user-data"
+          placeholder="3515778866"
+          name="Tel"
+        />
+        <label for="direccion">Dirección:</label>
+        <input
+          type="text"
+          class="user-data"
+          placeholder="Av. Gral Paz 300 Piso 2 Dpto 6. CP:5000"
+          name="Direccion"
+        />
+        <div class="envios_pagos">
+          <p class="pagos_envios">Seleccione el tipo de envío</p>
+          <label for="domicilio"
+            >Envío a domicilio<input
+              class="check-btn check"
+              type="radio"
+              id="envio_domicilio"
+              name="envio"
+              value="domicilio"
+          /></label>
+          <!-- <br> -->
+          <label for="sucursal"
+            >Retiro en sucursal<input
+              class="check-btn check"
+              type="radio"
+              id="retira_sucursal"
+              name="envio"
+              value="sucursal"
+          /></label>
+          <br />
+          <button class="buy-button" id="btn-continue">Continuar</button>
+          <div id="toggle" class="invisible">
+            <h3>Datos de su compra:</h3>
+            <div id="user-data-msj">
+              <ul id="lista_datos"></ul>
+            </div>
+
+            <p class="pagos_envios">Opciones de Pago</p>
+            <label for="efectivo"
+              >Efectivo<input
+                class="check-btn"
+                type="radio"
+                id="pago_eft"
+                name="pago"
+                value="efectivo"
+            /></label>
+            <label for="tarjeta"
+              >Tarjeta de Crédito<input
+                class="check-btn"
+                type="radio"
+                id="tar_cre"
+                name="pago"
+                value="tarjeta" /></label
+            ><br />
+
+            <!-- CREDIT CARD FORM STARTS HERE -->
+            <div class="panel panel-default credit-card-box">
+              <div class="panel-body">
+                <form role="form" id="payment-form">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="form-group">
+                        <label for="cardNumber">CARD OWNER NAME</label>
+                        <div class="input-group">
+                          <input
+                            type="tel"
+                            class="form-control"
+                            name="cardNumber"
+                            placeholder="Name"
+                            autocomplete="cc-number"
+                            required
+                            autofocus
+                          />
+                          <span class="input-group-addon"
+                            ><i class="fa fa-credit-card"></i
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="form-group">
+                        <label for="cardNumber">CARD NUMBER</label>
+                        <div class="input-group">
+                          <input
+                            type="tel"
+                            class="form-control"
+                            name="cardNumber"
+                            placeholder="Valid Card Number"
+                            autocomplete="cc-number"
+                            required
+                            autofocus
+                          />
+                          <span class="input-group-addon"
+                            ><i class="fa fa-credit-card"></i
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row" style="display: flex">
+                    <div class="col-xs-7 col-md-7">
+                      <div class="form-group">
+                        <label for="cardExpiry"
+                          ><span class="hidden-xs">EXPIRATION</span>
+                          <span class="visible-xs-inline">EXP</span> DATE</label
+                        >
+                        <input
+                          type="tel"
+                          class="form-control"
+                          name="cardExpiry"
+                          placeholder="MM / YY"
+                          autocomplete="cc-exp"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-xs-5 col-md-5 pull-right">
+                      <div class="form-group">
+                        <label for="cardCVC">CV CODE</label>
+                        <input
+                          type="tel"
+                          class="form-control"
+                          name="cardCVC"
+                          placeholder="CVC"
+                          autocomplete="cc-csc"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row" style="display: none">
+                    <div class="col-xs-12">
+                      <p class="payment-errors"></p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- If you're using Stripe for payments -->
+
+            <button class="buy-button cancel">
+              <a href="index.html"> Cancelar Compra</a>
+            </button>
+            <!-- Acá deberia salir un alert con compra cancelada! -->
+            <button class="buy-button confirm">Confirmar Compra</button>
+            <!-- Acá deberia salir un alert con compra exitosa! -->
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bottom">
+      <h3>=^.^=</h3>
+
+      <p>COPYRIGHT FELINOS FELICES -- @2020</p>
+    </footer>
+
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <script src="credit-card-payment.js"></script>
+    <script src="pago.js"></script>
+  </body>
+</html>
