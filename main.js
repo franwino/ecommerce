@@ -24,10 +24,7 @@ btn_vaciar.addEventListener("click", () => {
   tablaCarrito(listaCarro, "carrito");
 });
 
-// Alerta que finalizo el proceso
-function finalizo(msj) {
-  window.alert(msj);
-}
+
 
 class Producto {
   // Crea la clase Producto, que representa un artículo con sus datos
@@ -180,6 +177,11 @@ function addItemToCart(cod) {
   saveCart();
 }
 
+// Alerta que finalizo el proceso
+function finalizo(msj) {
+  window.alert(msj);
+}
+
 // Borrar del carrito
 function eliminarItem(cod) {
   let ind;
@@ -191,7 +193,7 @@ function eliminarItem(cod) {
   }
   listaCarro[ind].setCantidad(0);
   listaCarro.splice(ind, ind + 1);
-  tablaCarrito(listaCarro, "carrito", finalizo("Item Eliminado!"));
+  tablaCarrito(listaCarro, "carrito", finalizo);
 }
 
 // Mostrar Carrito
@@ -236,7 +238,7 @@ function tablaCarrito(array, id, callback = undefined) {
     table.innerHTML = "<td>No hay nada todavía. ¿Qué esperas?</td>";
   }
   saveCart();
-  callback;
+  callback('Finalizo!');
 }
 
 // Ordenar por precio
